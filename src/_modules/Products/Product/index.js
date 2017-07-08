@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
 
-class Products extends Component {
+class Product extends Component {
   constructor() {
     super();
     this.products = {list : []};
@@ -12,8 +12,8 @@ class Products extends Component {
         return response.json();
       }).then((data) => {
         console.log(data);
-        this.products.list = data;
-        this.setState(this.products);
+        this.product.list = data;
+        this.setState(this.product);
       }).catch(function (err) {
         console.log(err);
       });
@@ -22,22 +22,22 @@ class Products extends Component {
 
   render() {
     
-    const listItems = this.products.list.map((item) => {
+    const listItems = this.product.list.map((item, index) => {
       return (
-        <li>
+        {/*<li key={index}>
           <a href="{item._id}">{item.name}</a>
-        </li>
+        </li>*/}
       );
     });
 
     
     return (
       <div>
-        <h2>Products</h2>
-        <ul>{listItems}</ul>
+        <h2>Product</h2>
+        {/*<ul>{listItems}</ul>*/}
       </div>
     );
   }
 }
 
-export default Products;
+export default Product;

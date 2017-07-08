@@ -5,7 +5,7 @@ import {
   Link
 } from 'react-router-dom';
 import App from './../App';
-import Products from './../_modules/Products/index.js';
+import Products from './../_modules/Products/Products/index.js';
 
 
 class Navigation extends Component {
