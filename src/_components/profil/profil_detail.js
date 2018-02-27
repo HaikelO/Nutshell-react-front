@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 
-class Profil extends Component {
+class ProfilDetail extends Component {
     render() {
         return (
             <div>
-                Profil
+                Profil Detail !
             </div>
         );
     }
 }
-
-export default Profil;
+export default ProfilDetail;
