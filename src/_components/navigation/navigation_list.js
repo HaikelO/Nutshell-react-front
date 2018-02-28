@@ -7,13 +7,11 @@ class NavigationList extends Component {
         return <NavigationListItem key={item.title} path={item.path} title={item.title} />
     }
     render() {
-        const list = [{ title: "Bills", path: "/bills" }, { title: "Products", path: "/products" }, { title: "Users", path: "/users" }, { title: "Profil", path: "/profil" }]
+        const list = [{ title: "Cash Register", path: "/cashregister" }, { title: "Bills", path: "/bills" }, { title: "Products", path: "/products" }, { title: "Users", path: "/users" }, { title: "Profil", path: "/profil" }]
         return (
-            <div>
-                <nav className="navbar justify-content-center">
-                    {list.map(this.renderNavigationListItem)}
-                </nav>
-            </div>
+            <nav className="navbar justify-content-center">
+                {list.map(this.renderNavigationListItem)}
+            </nav>
         );
     }
 }

@@ -4,10 +4,8 @@ import NavigationList from './navigation_list';
 
 class NavigationShow extends Component {
     render() {
-        return (
-            <div>
-                <NavigationList />
-            </div>
+        return (            
+                <NavigationList />            
         );
     }
 }
