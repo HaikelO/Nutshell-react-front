@@ -8,9 +8,9 @@ class ProductsShow extends Component {
 
         const list = [{ title: "toto" }, { title: "tata" }, { title: "tete" }];
         return (
-            <div>
-                <NavigationShow />
-                <ProductsList list={list}/>
+            <div className="row">
+                <NavigationShow className="col-md-4" />
+                <ProductsList list={list} className="col-md-8"/>
             </div>
         );
     }

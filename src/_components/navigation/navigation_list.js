@@ -10,7 +10,9 @@ class NavigationList extends Component {
         const list = [{ title: "Bills", path: "/bills" }, { title: "Products", path: "/products" }, { title: "Users", path: "/users" }, { title: "Profil", path: "/profil" }]
         return (
             <div>
-                {list.map(this.renderNavigationListItem)}
+                <nav className="navbar justify-content-center">
+                    {list.map(this.renderNavigationListItem)}
+                </nav>
             </div>
         );
     }

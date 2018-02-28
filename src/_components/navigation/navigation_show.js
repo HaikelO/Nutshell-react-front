@@ -6,9 +6,7 @@ class NavigationShow extends Component {
     render() {
         return (
             <div>
-                <nav className="navbar navbar-toggleable-md navbar-light">
-                    <NavigationList />                    
-                </nav>
+                <NavigationList />
             </div>
         );
     }
