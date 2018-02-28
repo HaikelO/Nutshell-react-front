@@ -9,7 +9,7 @@ class CashRegisterCartList extends Component {
         const list = [{ quantity: 1, title: "Produit A", price: 5 }, { quantity: 2, title: "Produit B", price: 10 }, { quantity: 1, title: "Produit C", price: 5 }, { quantity: 1, title: "Produit D", price: 1 }];
         return (
             <div>
-                <table class="table table-hover">
+                <table className="table table-hover">
                     <thead>
                         <tr>
                             <th>

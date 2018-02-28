@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import './cash_register_products_categories_list_item.css';
 
-class CashRegisterCategoriesListItem extends Component {
+class CashRegisterProductsCategoriesListItem extends Component {
+    selectCategorie(item){
+        console.log("click event",item);
+    }
     render() {
         return (
-            <div>
-                Categorie
-            </div>
+            <button className="btn cr_products_categories_list_item" onClick={() => {this.selectCategorie(this.props.title)}}>
+                {this.props.title}
+            </button>
         );
     }
 }
 
-export default CashRegisterCategoriesListItem;
+export default CashRegisterProductsCategoriesListItem;
