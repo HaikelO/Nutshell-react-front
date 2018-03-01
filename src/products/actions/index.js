@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-export const FETCH_PRODUCTS= 'fetch_products';
+export const FETCH_PRODUCTS = 'fetch_PRODUCTS';
 
-const ROOT_URL = "localhost:9090/api";
+const ROOT_URL = "http://localhost:9090/api";
 
-export function fetchBills() {
+export function fetchProducts() {
     const request = axios.get(`${ROOT_URL}/products`);
     return {
         type: FETCH_PRODUCTS,

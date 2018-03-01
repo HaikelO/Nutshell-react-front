@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fetchProducts } from './../../products/actions/index';
 import CashRegisterProductsListItem from './cash_register_products_list_item';
 
+
 class CashRegisterProductsList extends Component {
-    renderListItem(item){
-        return <CashRegisterProductsListItem title={item.title} key={item.title}/>;
+    renderListItem(item) {
+        return <CashRegisterProductsListItem title={item.title} key={item.title} />;
     }
     render() {
-        const list = [{title:"Produit A"},{title:"Produit B"},{title:"Produit C"},{title:"Produit D"},{title:"Produit E"},{title:"Produit F"},{title:"Produit G"},{title:"Produit H"},{title:"Produit I"},{title:"Produit J"}];
+        let list = [{ title: "Produit A", categorie: "Categorie A" }, { title: "Produit B", categorie: "Categorie A" }, { title: "Produit C", categorie: "Categorie A" }, { title: "Produit D", categorie: "Categorie B" }, { title: "Produit E", categorie:"Categorie B" }, { title: "Produit F", categorie:"Categorie B" }, { title: "Produit G", categorie:"Categorie C" }, { title: "Produit H", categorie:"Categorie C" }, { title: "Produit I", categorie:"Categorie C" }, { title: "Produit J", categorie:"Categorie D" }];
+        if (this.props.categorie) {            
+            list = list.filter((product) => this.props.categorie == product.categorie);            
+        }
         return (
             <div>
                 {list.map(this.renderListItem)}
@@ -14,5 +21,9 @@ class CashRegisterProductsList extends Component {
         );
     }
 }
-
-export default CashRegisterProductsList;
+function mapStateToProps(state) {
+    return {
+        categorie: state.activeCategorie
+    }
+}
+export default connect(mapStateToProps)(CashRegisterProductsList);
